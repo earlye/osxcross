@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -x
+#!/usr/bin/env -vS bash -x
 #
 # Build and install the cctools the SDK and macports.
 #
