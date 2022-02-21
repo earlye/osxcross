@@ -275,11 +275,11 @@ fi
 unset MACOSX_DEPLOYMENT_TARGET
 echo "E6712EEC-30B5-4BA5-B6FF-93A9431DDE88"
 echo "SDK_VERSION: $SDK_VERSION"
-export OSXCROSS_SDKROOT=/usr/local/src/osxcross/target/SDK/MacOSX12.1.sdk
-echo "OSXCROSS_SDKROOT: $OSXCROSS_SDKROOT"
-ls -l /usr/local/src/osxcross/target/SDK
-ln -s /usr/local/src/osxcross/target/SDK/MacOSX12.1.sdk /usr/local/src/osxcross/target/SDK/MacOSX12.0.sdk
-echo "850C1813-D900-482A-AD98-C209FCB0A900"
+#export OSXCROSS_SDKROOT=/usr/local/src/osxcross/target/SDK/MacOSX12.1.sdk
+#echo "OSXCROSS_SDKROOT: $OSXCROSS_SDKROOT"
+#ls -l /usr/local/src/osxcross/target/SDK
+#ln -s /usr/local/src/osxcross/target/SDK/MacOSX12.1.sdk /usr/local/src/osxcross/target/SDK/MacOSX12.0.sdk
+#echo "850C1813-D900-482A-AD98-C209FCB0A900"
 
 if [ $(osxcross-cmp $SDK_VERSION ">=" 10.7) -eq 1 ]; then
   pushd $SDK_DIR/MacOSX$SDK_VERSION.sdk &>/dev/null
