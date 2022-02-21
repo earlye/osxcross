@@ -277,7 +277,7 @@ unset MACOSX_DEPLOYMENT_TARGET
 if [ $(osxcross-cmp $SDK_VERSION ">=" 10.7) -eq 1 ]; then
   pushd $SDK_DIR/MacOSX$SDK_VERSION.sdk &>/dev/null
   if [ ! -f "usr/include/c++/v1/vector" ]; then
-    echo ""
+    echo "CBB38D26-F0E7-4239-AEAC-EDDBA5123A39"
     echo -n "Given SDK does not contain libc++ headers "
     echo "(-stdlib=libc++ test may fail)"
     echo -n "You may want to re-package your SDK using "
@@ -303,34 +303,38 @@ if [ $(osxcross-cmp $SDK_VERSION ">=" 10.7) -eq 1 ]; then
     fi
   fi
   popd &>/dev/null
-  echo ""
+  echo "255F13AA-0B91-45FA-9106-6AFE097394F7"
   if [ $I386_SUPPORTED -eq 1 ]; then
     test_compiler_cxx11 i386-apple-$TARGET-clang++ $BASE_DIR/oclang/test_libcxx.cpp
   fi
   test_compiler_cxx11 x86_64-apple-$TARGET-clang++ $BASE_DIR/oclang/test_libcxx.cpp
-  echo ""
+  echo "C330AF6D-13C4-4A8F-9F24-FCA145031476"
 fi
 
 if [ $I386_SUPPORTED -eq 1 ]; then
+  echo "A99202A2-B390-44AA-8A94-70090CDF7E2E"
   test_compiler i386-apple-$TARGET-clang $BASE_DIR/oclang/test.c "required"
   test_compiler i386-apple-$TARGET-clang++ $BASE_DIR/oclang/test.cpp "required"
-  echo ""
+  echo "C70F3675-2134-4229-8849-BB154DD57661"
 fi
 
 if [ $X86_64H_SUPPORTED -eq 1 ]; then
+  echo "2856FF90-9638-4261-B07D-24EF0E4259C3"
   test_compiler x86_64h-apple-$TARGET-clang $BASE_DIR/oclang/test.c
   test_compiler x86_64h-apple-$TARGET-clang++ $BASE_DIR/oclang/test.cpp
-  echo ""
+  echo "0307D683-6A1A-4A99-BA94-D8D435AECD8D"
 fi
 
 if [ $ARM_SUPPORTED -eq 1 ]; then
+  echo "97E30A9B-8D68-4246-88CA-6106B90AA364"
   test_compiler arm64-apple-$TARGET-clang $BASE_DIR/oclang/test.c
   test_compiler arm64-apple-$TARGET-clang++ $BASE_DIR/oclang/test.cpp
-  echo ""
+  echo "318C1780-94A2-4E56-90B7-74D0ED6740E1"
 
+  echo "9257E36A-4F6B-4380-BE4E-F3175B6E5DFF"
   test_compiler arm64e-apple-$TARGET-clang $BASE_DIR/oclang/test.c
   test_compiler arm64e-apple-$TARGET-clang++ $BASE_DIR/oclang/test.cpp
-  echo ""
+  echo "4E5E7B02-9D02-457C-823E-A4E69186C961"
 fi
 
 test_compiler x86_64-apple-$TARGET-clang $BASE_DIR/oclang/test.c "required"
